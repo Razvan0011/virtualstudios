@@ -1,0 +1,393 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container{
+    width: 80%;
+    max-width: 1110px;
+    min-width: 600px;
+    margin: auto;
+    /* background-color: lawngreen; */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+/* Section: Showcase ************************************ */
+.showcase {
+    position: relative;
+}
+
+/* Background image */
+.showcase .bg-image{
+    position: absolute;
+    background: url("./img/bg-primary.jpg") no-repeat center center/cover;
+    filter: brightness(90%);
+    width: 100%;
+    height: 100vh;  
+    z-index: -1;
+}
+
+/* Pink shadow */
+.showcase .bg-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100vh;  
+    z-index: -1;
+    background: rgb(255,0,172);
+    background: linear-gradient(0deg, rgba(255,0,172,0) 5%, rgba(255, 0, 200, 0.336) 51%, rgba(255,0,151,0) 82%); 
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 0 0;
+    max-width: inherit;
+    width: 80%;
+    /* background-color: red; */
+}
+
+/* Logo */
+.logo img{
+    width: 192px;
+    height: 32px;
+}
+
+/* List*/
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Alata", sans-serif;
+    font-size: 16px;
+    padding-top: 5px;
+}
+/* List items */
+.navbar ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+/* Span inside the list items */
+.navbar ul li span{
+    background-color: white;
+    display: inline-block;
+    width: 1px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+}
+
+/* Hover states */
+.navbar ul li a:hover + span{
+    visibility: visible;
+    background-color: white;
+    transform: scaleX(24);
+}
+
+
+/* Div containing the title box */
+.presentation {
+    /* background-color: tomato; */
+    height: 100vh;
+    color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;   
+}
+
+/* Title Box on the showcase page */
+.title-box {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 40px 95px 40px 40px;
+}
+
+.title-box h1 {
+    font-size: 75px;
+    font-weight: 300;
+}
+
+.title-box h1:last-child {
+    height: 58px;
+}
+
+/* Section: Interactive-VR ************************************** */
+.interactive-vr {
+    padding: 146px 0; 
+}
+
+.interactive-vr .container {
+    position: relative;
+}
+
+/* Box containing title and paragraph */
+.text-interactive {
+    background-color:white;
+    display: inline-block;
+    width: 500px;
+    padding: 100px 80px 80px 100px;
+    position: absolute;
+    right: -80px;
+    top: 35%;
+    min-width: 600px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* The title */
+.h1-std {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 300;
+}
+
+/* Paragraph */
+.text-interactive p {
+    font-family: "Alata", sans-serif;
+    padding-top: 18px;
+    line-height: 25px;
+    color: #888;
+}
+
+/* Section: Creations ********************************************* */
+.creations {
+    padding-bottom: 146px;
+}
+
+/* Title and button div */
+.creations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 70px;
+}
+
+/* The button on the right */
+.btn {
+    background: white;
+    font-family: "Alata", sans-serif;
+    letter-spacing: 5px;
+    outline: none;
+    border: 2px solid #999;
+    border-radius: 3px;
+    padding: 10px 45px;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+/* The grid [][][][][][][][][][][][][][][]*/
+.grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px
+}
+
+/* Grid elements */
+.deep-earth, .night-arcade, .soccer, .the-grid, .from-above, .borealis, .curiosity, .fisheye {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Grid elements images */
+.deep-earth img, .night-arcade img, .soccer img, .the-grid img, .from-above img, .borealis img, .curiosity img, .fisheye img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover state */
+.deep-earth:hover, .night-arcade:hover, .soccer:hover, .the-grid:hover, .from-above:hover, .borealis:hover, .curiosity:hover, .fisheye:hover {
+    cursor: pointer;
+}
+
+/* Grid titles */
+.grid-title {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    padding-left: 30px;
+    width: 65%;
+    z-index: 1;
+}
+
+.deep-earth:hover img, .night-arcade:hover img, .soccer:hover img, .the-grid:hover img, .from-above:hover img, .borealis:hover img, .curiosity:hover img, .fisheye:hover img {
+    opacity: 0.4;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+.deep-earth:hover div, .night-arcade:hover div, .soccer:hover div, .the-grid:hover div, .from-above:hover div, .borealis:hover div, .curiosity:hover div, .fisheye:hover div {
+    transform: translateY(100%);
+    transition: all 0.2s ease-in-out;
+}
+.deep-earth:hover h1, .night-arcade:hover h1, .soccer:hover h1, .the-grid:hover h1, .from-above:hover h1, .borealis:hover h1, .curiosity:hover h1, .fisheye:hover h1 {
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Fourth grid title needed to be more compact */
+.the-grid .grid-title{
+    width: 50%;
+}
+
+/* This is a shadow are the bottom of the grid item so that the title can be seen clearly */
+.shadow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.76) 0%, rgba(9,9,121,0) 50%, rgba(0,212,255,0) 100%);
+}
+
+/* Footer ************************************************* */
+footer {
+    background: black;
+    height: 200px;
+    color: white;
+}
+
+/* Logo and social media icons */
+.logo-social {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0 0 0;
+    max-width: inherit;
+    width: 100%;
+}
+
+/* List with social media icons */
+.logo-social ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Alata", sans-serif;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+/* Social media list icons */
+.logo-social ul li {
+    position: relative;
+    margin: 0 8px;
+}
+
+.logo-social ul li:last-child {
+    margin-right: 0;
+}
+
+.logo-social ul li a {
+    text-decoration: none;
+}
+
+/* Span inside the list items */
+.logo-social ul li span{
+    background-color: white;
+    display: inline-block;
+    width: 1px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+}
+
+/* Hover states */
+.logo-social ul li a:hover + span{
+    visibility: visible;
+    background-color: white;
+    transform: scaleX(24);
+}
+
+
+/* Bottom navbar  *****************************/
+.navbar-bottom {
+    font-family: "Alata", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 0 0;
+    max-width: inherit;
+    width: 100%;
+}
+
+/* Bottom navigation */
+.navbar-bottom .items ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+/* List items from the ul */
+.navbar-bottom .items ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar-bottom .items ul li:first-child {
+    margin-left: 0px;
+}
+
+/* Span inside the list items */
+.navbar-bottom ul li span{
+    background-color: white;
+    display: inline-block;
+    width: 1px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+}
+
+/* Hover states */
+.navbar-bottom ul li a:hover + span{
+    visibility: visible;
+    background-color: white;
+    transform: scaleX(24);
+}
+
+/* Disclaimer */
+.navbar-bottom .copy {
+    color: #888;
+}
