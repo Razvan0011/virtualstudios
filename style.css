@@ -97,6 +97,13 @@ a {
     visibility: hidden;
 }
 
+.hamburger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
 /* Hover states */
 .navbar ul li a:hover + span{
     visibility: visible;
@@ -120,7 +127,9 @@ a {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     border: 2px solid white;
-    padding: 40px 95px 40px 40px;
+    padding: 40px 40px 40px 40px;
+    /* width: 63%; */
+    width: 680px;
 }
 
 .title-box h1 {
@@ -128,9 +137,9 @@ a {
     font-weight: 300;
 }
 
-.title-box h1:last-child {
+/* .title-box h1:last-child {
     height: 58px;
-}
+} */
 
 /* Section: Interactive-VR ************************************** */
 .interactive-vr {
@@ -237,6 +246,7 @@ a {
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
+    font-size: 25px;
     color: white;
     position: absolute;
     bottom: 30px;
@@ -246,7 +256,7 @@ a {
 }
 
 .deep-earth:hover img, .night-arcade:hover img, .soccer:hover img, .the-grid:hover img, .from-above:hover img, .borealis:hover img, .curiosity:hover img, .fisheye:hover img {
-    opacity: 0.4;
+    opacity: 0.35;
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
 }
@@ -390,4 +400,28 @@ footer {
 /* Disclaimer */
 .navbar-bottom .copy {
     color: #888;
+}
+
+/* Screens smaller than 1200px width */
+@media (max-width: 1200px) {
+    /* Navbar items */
+    .navbar .items {
+        display: none;
+    }
+    /* Hamburger icon */
+    .navbar .hamburger {
+        display: flex;
+    }
+    /* Title box */
+    .presentation .title-box {
+        width: 800px;
+    }
+    /* Title */
+    .presentation .title-box h1 {
+        font-size: 50px;
+    }
+    /* Grid titles */
+    .grid-title {
+        width: 75%;
+    }
 }
